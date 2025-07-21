@@ -91,7 +91,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -123,14 +123,10 @@
         },
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks"
-        ]
+        "tags": ["webhooks"]
       },
       "get": {
         "summary": "List webhooks",
@@ -152,7 +148,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -165,14 +161,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks"
-        ]
+        "tags": ["webhooks"]
       }
     },
     "/v1/notifications/webhooks/{webhook_id}": {
@@ -196,7 +188,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -209,14 +201,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks"
-        ]
+        "tags": ["webhooks"]
       },
       "patch": {
         "summary": "Update webhook",
@@ -238,7 +226,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -260,14 +248,10 @@
         },
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks"
-        ]
+        "tags": ["webhooks"]
       },
       "delete": {
         "summary": "Delete webhook",
@@ -282,7 +266,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -295,14 +279,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks"
-        ]
+        "tags": ["webhooks"]
       }
     },
     "/v1/notifications/webhooks/{webhook_id}/event-types": {
@@ -326,7 +306,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -339,20 +319,16 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks"
-        ]
+        "tags": ["webhooks"]
       }
     },
     "/v1/notifications/webhooks-lookup": {
       "post": {
         "summary": "Create webhook lookup",
-        "description": "Creates a webhook lookup.",
+        "description": "Creates a webhook lookup. A webhook lookup ties the API caller's REST API app to the subject account (or, if no subject is specified, to the API caller's account). If a webhook event is generated for an event that is tied to the account but not to a particular REST API app (for example, payments initiated with the NVP/SOAP APIs or through the user interface on PayPal.com), those webhook events will treated as if they were intended for the REST API app registered in the webhook lookup instead. Webhook events will then be delivered to any webhooks registered to that REST API app.",
         "operationId": "webhooks-lookup.post",
         "responses": {
           "201": {
@@ -370,7 +346,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -378,14 +354,10 @@
         },
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-lookup"
-        ]
+        "tags": ["webhooks-lookup"]
       },
       "get": {
         "summary": "List webhook lookups",
@@ -407,7 +379,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -415,14 +387,10 @@
         },
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-lookup"
-        ]
+        "tags": ["webhooks-lookup"]
       }
     },
     "/v1/notifications/webhooks-lookup/{webhook_lookup_id}": {
@@ -446,7 +414,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -459,14 +427,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-lookup"
-        ]
+        "tags": ["webhooks-lookup"]
       },
       "delete": {
         "summary": "Delete webhook lookup",
@@ -481,7 +445,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -494,14 +458,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-lookup"
-        ]
+        "tags": ["webhooks-lookup"]
       }
     },
     "/v1/notifications/verify-webhook-signature": {
@@ -525,7 +485,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -604,9 +564,7 @@
             ]
           }
         ],
-        "tags": [
-          "verify-webhook-signature"
-        ]
+        "tags": ["verify-webhook-signature"]
       }
     },
     "/v1/notifications/webhooks-event-types": {
@@ -630,15 +588,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
           }
         },
-        "tags": [
-          "webhooks-event-types"
-        ]
+        "tags": ["webhooks-event-types"]
       }
     },
     "/v1/notifications/webhooks-events": {
@@ -662,7 +618,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -687,14 +643,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-events"
-        ]
+        "tags": ["webhooks-events"]
       }
     },
     "/v1/notifications/webhooks-events/{event_id}": {
@@ -718,7 +670,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -731,14 +683,10 @@
         ],
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-events"
-        ]
+        "tags": ["webhooks-events"]
       }
     },
     "/v1/notifications/webhooks-events/{event_id}/resend": {
@@ -762,7 +710,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -784,14 +732,10 @@
         },
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "webhooks-events"
-        ]
+        "tags": ["webhooks-events"]
       }
     },
     "/v1/notifications/simulate-event": {
@@ -815,7 +759,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/error"
+                  "$ref": "#/components/schemas/error-2"
                 }
               }
             }
@@ -841,14 +785,10 @@
         },
         "security": [
           {
-            "Oauth2": [
-              "https://uri.paypal.com/services/applications/webhooks"
-            ]
+            "Oauth2": ["https://uri.paypal.com/services/applications/webhooks"]
           }
         ],
-        "tags": [
-          "simulate-event"
-        ]
+        "tags": ["simulate-event"]
       }
     }
   },
@@ -869,83 +809,101 @@
       }
     },
     "schemas": {
-      "error_details": {
-        "title": "Error Details",
+      "EventList": {
         "type": "object",
-        "description": "The error details. Required for client-side `4XX` errors.",
+        "title": "Event List",
+        "description": "A list of webhooks events.",
         "properties": {
-          "field": {
-            "type": "string",
-            "description": "The field that caused the error. If this field is in the body, set this value to the field's JSON pointer value. Required for client-side errors."
+          "events": {
+            "$ref": "#/components/schemas/event_list"
           },
-          "value": {
-            "type": "string",
-            "description": "The value of the field that caused the error."
+          "count": {
+            "type": "integer",
+            "description": "The number of items in each range of results. Note that the response might have fewer items than the requested `page_size` value."
           },
-          "location": {
-            "$ref": "#/components/schemas/error_location"
-          },
-          "issue": {
-            "type": "string",
-            "description": "The unique, fine-grained application-level error code."
-          },
-          "description": {
-            "type": "string",
-            "description": "The human-readable description for an issue. The description can change over the lifetime of an API, so clients must not depend on this value."
-          }
-        },
-        "required": [
-          "issue"
-        ]
-      },
-      "error_location": {
-        "type": "string",
-        "description": "The location of the field that caused the error. Value is `body`, `path`, or `query`.",
-        "enum": [
-          "body",
-          "path",
-          "query"
-        ],
-        "default": "body"
-      },
-      "error_link_description": {
-        "title": "Link Description",
-        "description": "The request-related [HATEOAS link](/api/rest/responses/#hateoas-links) information.",
-        "type": "object",
-        "required": [
-          "href",
-          "rel"
-        ],
-        "properties": {
-          "href": {
-            "description": "The complete target URL. To make the related call, combine the method with this [URI Template-formatted](https://tools.ietf.org/html/rfc6570) link. For pre-processing, include the `$`, `(`, and `)` characters. The `href` is the key HATEOAS component that links a completed call with a subsequent call.",
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 20000,
-            "pattern": "^.*$"
-          },
-          "rel": {
-            "description": "The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).",
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 100,
-            "pattern": "^.*$"
-          },
-          "method": {
-            "description": "The HTTP method required to make the related call.",
-            "type": "string",
-            "minLength": 3,
-            "maxLength": 6,
-            "pattern": "^[A-Z]*$",
-            "enum": [
-              "GET",
-              "POST",
-              "PUT",
-              "DELETE",
-              "PATCH"
-            ]
+          "links": {
+            "$ref": "#/components/schemas/link_description_list"
           }
         }
+      },
+      "EventTypeList": {
+        "type": "object",
+        "title": "Event Type List",
+        "description": "A list of webhook events.",
+        "properties": {
+          "event_types": {
+            "$ref": "#/components/schemas/event_type_list"
+          }
+        }
+      },
+      "WebhookList": {
+        "type": "object",
+        "title": "Webhook List",
+        "description": "A list of webhooks.",
+        "properties": {
+          "webhooks": {
+            "$ref": "#/components/schemas/webhook_list"
+          }
+        }
+      },
+      "WebhookLookupList": {
+        "type": "object",
+        "title": "Webhook Lookup List",
+        "description": "A list of webhook lookups.",
+        "properties": {
+          "webhooks_lookups": {
+            "$ref": "#/components/schemas/webhooks_lookup_list"
+          }
+        }
+      },
+      "definitions-event_type_list": {
+        "type": "array",
+        "maxItems": 500,
+        "description": "An array of events to which to subscribe your webhook. To subscribe to all events, including events as they are added, specify the asterisk wild card. To replace the `event_types` array, specify the asterisk wild card. To list all supported events, <a href=\"#event-type_list\">list available events</a>.",
+        "readOnly": false,
+        "items": {
+          "$ref": "#/components/schemas/event_type"
+        }
+      },
+      "definitions-link_description_list": {
+        "type": "array",
+        "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).",
+        "readOnly": true,
+        "items": {
+          "$ref": "#/components/schemas/link_description"
+        }
+      },
+      "error": {},
+      "error-2": {
+        "type": "object",
+        "title": "Error",
+        "description": "The error details.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The human-readable, unique name of the error."
+          },
+          "message": {
+            "type": "string",
+            "description": "The message that describes the error."
+          },
+          "debug_id": {
+            "type": "string",
+            "description": "The PayPal internal ID. Used for correlation purposes."
+          },
+          "information_link": {
+            "type": "string",
+            "description": "The information link, or URI, that shows detailed information about this error for the developer.",
+            "readOnly": true
+          },
+          "details": {
+            "$ref": "#/components/schemas/error_details_list"
+          },
+          "links": {
+            "$ref": "#/components/schemas/link_description_list"
+          }
+        },
+        "required": ["name", "message", "debug_id"]
       },
       "error_400": {
         "type": "object",
@@ -954,9 +912,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "INVALID_REQUEST"
-            ]
+            "enum": ["INVALID_REQUEST"]
           },
           "message": {
             "type": "string",
@@ -992,9 +948,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "AUTHENTICATION_FAILURE"
-            ]
+            "enum": ["AUTHENTICATION_FAILURE"]
           },
           "message": {
             "type": "string",
@@ -1030,15 +984,11 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "NOT_AUTHORIZED"
-            ]
+            "enum": ["NOT_AUTHORIZED"]
           },
           "message": {
             "type": "string",
-            "enum": [
-              "Authorization failed due to insufficient permissions."
-            ]
+            "enum": ["Authorization failed due to insufficient permissions."]
           },
           "details": {
             "type": "array",
@@ -1068,15 +1018,11 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "RESOURCE_NOT_FOUND"
-            ]
+            "enum": ["RESOURCE_NOT_FOUND"]
           },
           "message": {
             "type": "string",
-            "enum": [
-              "The specified resource does not exist."
-            ]
+            "enum": ["The specified resource does not exist."]
           },
           "details": {
             "type": "array",
@@ -1106,9 +1052,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "RESOURCE_CONFLICT"
-            ]
+            "enum": ["RESOURCE_CONFLICT"]
           },
           "message": {
             "type": "string",
@@ -1144,9 +1088,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "UNSUPPORTED_MEDIA_TYPE"
-            ]
+            "enum": ["UNSUPPORTED_MEDIA_TYPE"]
           },
           "message": {
             "type": "string",
@@ -1182,9 +1124,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "UNPROCESSABLE_ENTITY"
-            ]
+            "enum": ["UNPROCESSABLE_ENTITY"]
           },
           "message": {
             "type": "string",
@@ -1220,15 +1160,11 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "INTERNAL_SERVER_ERROR"
-            ]
+            "enum": ["INTERNAL_SERVER_ERROR"]
           },
           "message": {
             "type": "string",
-            "enum": [
-              "An internal server error occurred."
-            ]
+            "enum": ["An internal server error occurred."]
           },
           "debug_id": {
             "type": "string",
@@ -1263,15 +1199,11 @@
         "properties": {
           "name": {
             "type": "string",
-            "enum": [
-              "SERVICE_UNAVAILABLE"
-            ]
+            "enum": ["SERVICE_UNAVAILABLE"]
           },
           "message": {
             "type": "string",
-            "enum": [
-              "Service Unavailable."
-            ]
+            "enum": ["Service Unavailable."]
           },
           "debug_id": {
             "type": "string",
@@ -1294,73 +1226,32 @@
           "information_link": "https://developer.paypal.com/docs/api/orders/v2/#error-SERVICE_UNAVAILABLE"
         }
       },
-      "EventTypeList": {
+      "error_details": {
+        "title": "Error Details",
         "type": "object",
-        "title": "Event Type List",
-        "description": "A list of webhook events.",
+        "description": "The error details. Required for client-side `4XX` errors.",
         "properties": {
-          "event_types": {
-            "type": "array",
-            "description": "An array of webhook events.",
-            "items": {
-              "$ref": "#/components/schemas/event_type"
-            }
-          }
-        }
-      },
-      "WebhookList": {
-        "type": "object",
-        "title": "Webhook List",
-        "description": "A list of webhooks.",
-        "properties": {
-          "webhooks": {
-            "type": "array",
-            "description": "An array of webhooks.",
-            "items": {
-              "$ref": "#/components/schemas/webhook"
-            }
-          }
-        }
-      },
-      "EventList": {
-        "type": "object",
-        "title": "Event List",
-        "description": "A list of webhooks events.",
-        "properties": {
-          "events": {
-            "type": "array",
-            "description": "An array of webhooks events.",
-            "items": {
-              "$ref": "#/components/schemas/event"
-            }
+          "field": {
+            "type": "string",
+            "description": "The field that caused the error. If this field is in the body, set this value to the field's JSON pointer value. Required for client-side errors."
           },
-          "count": {
-            "type": "integer",
-            "description": "The number of items in each range of results. Note that the response might have fewer items than the requested `page_size` value."
+          "value": {
+            "type": "string",
+            "description": "The value of the field that caused the error."
           },
-          "links": {
-            "type": "array",
-            "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).",
-            "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/link_description"
-            }
+          "location": {
+            "$ref": "#/components/schemas/error_location"
+          },
+          "issue": {
+            "type": "string",
+            "description": "The unique, fine-grained application-level error code."
+          },
+          "description": {
+            "type": "string",
+            "description": "The human-readable description for an issue. The description can change over the lifetime of an API, so clients must not depend on this value."
           }
-        }
-      },
-      "WebhookLookupList": {
-        "type": "object",
-        "title": "Webhook Lookup List",
-        "description": "A list of webhook lookups.",
-        "properties": {
-          "webhooks_lookups": {
-            "type": "array",
-            "description": "An array of webhook lookups.",
-            "items": {
-              "$ref": "#/components/schemas/webhooks_lookup"
-            }
-          }
-        }
+        },
+        "required": ["issue"]
       },
       "error_details-2": {
         "title": "Error Details",
@@ -1389,245 +1280,73 @@
             "description": "The human-readable description for an issue. The description can change over the lifetime of an API, so clients must not depend on this value."
           }
         },
-        "required": [
-          "issue"
-        ]
+        "required": ["issue"]
       },
-      "link_description": {
-        "type": "object",
+      "error_details_list": {
+        "type": "array",
+        "description": "An array of additional details about the error.",
+        "items": {
+          "$ref": "#/components/schemas/error_details-2"
+        }
+      },
+      "error_link_description": {
         "title": "Link Description",
-        "description": "The request-related [HATEOAS link](/docs/api/reference/api-responses/#hateoas-links) information.",
-        "required": [
-          "href",
-          "rel"
-        ],
+        "description": "The request-related [HATEOAS link](/api/rest/responses/#hateoas-links) information.",
+        "type": "object",
+        "required": ["href", "rel"],
         "properties": {
           "href": {
+            "description": "The complete target URL. To make the related call, combine the method with this [URI Template-formatted](https://tools.ietf.org/html/rfc6570) link. For pre-processing, include the `$`, `(`, and `)` characters. The `href` is the key HATEOAS component that links a completed call with a subsequent call.",
             "type": "string",
-            "description": "The complete target URL. To make the related call, combine the method with this [URI Template-formatted](https://tools.ietf.org/html/rfc6570) link. For pre-processing, include the `$`, `(`, and `)` characters. The `href` is the key HATEOAS component that links a completed call with a subsequent call."
+            "minLength": 0,
+            "maxLength": 20000,
+            "pattern": "^.*$"
           },
           "rel": {
+            "description": "The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml).",
             "type": "string",
-            "description": "The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml)."
+            "minLength": 0,
+            "maxLength": 100,
+            "pattern": "^.*$"
           },
           "method": {
-            "type": "string",
             "description": "The HTTP method required to make the related call.",
-            "enum": [
-              "GET",
-              "POST",
-              "PUT",
-              "DELETE",
-              "HEAD",
-              "CONNECT",
-              "OPTIONS",
-              "PATCH"
-            ]
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 6,
+            "pattern": "^[A-Z]*$",
+            "enum": ["GET", "POST", "PUT", "DELETE", "PATCH"]
           }
         }
       },
-      "error": {
+      "error_location": {
+        "type": "string",
+        "description": "The location of the field that caused the error. Value is `body`, `path`, or `query`.",
+        "enum": ["body", "path", "query"],
+        "default": "body"
+      },
+      "error_type": {
         "type": "object",
-        "title": "Error",
-        "description": "The error details.",
+        "title": "Error Type",
+        "description": "The type of webhook error that occurred.",
         "properties": {
-          "name": {
+          "id": {
             "type": "string",
-            "description": "The human-readable, unique name of the error."
-          },
-          "message": {
-            "type": "string",
-            "description": "The message that describes the error."
-          },
-          "debug_id": {
-            "type": "string",
-            "description": "The PayPal internal ID. Used for correlation purposes."
-          },
-          "information_link": {
-            "type": "string",
-            "description": "The information link, or URI, that shows detailed information about this error for the developer.",
+            "description": "The ID for the webhook error type.",
             "readOnly": true
           },
-          "details": {
-            "type": "array",
-            "description": "An array of additional details about the error.",
-            "items": {
-              "$ref": "#/components/schemas/error_details-2"
-            }
-          },
-          "links": {
-            "type": "array",
-            "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).",
-            "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/link_description",
-              "readOnly": true
-            }
-          }
-        },
-        "required": [
-          "name",
-          "message",
-          "debug_id"
-        ]
-      },
-      "event_type": {
-        "type": "object",
-        "title": "Event Type",
-        "description": "An event type.",
-        "properties": {
           "name": {
             "type": "string",
-            "description": "The unique event name.<blockquote><strong>Note:</strong> To subscribe to all events, including events as they are added, specify an `*` as the value to represent a wildcard.</blockquote>",
+            "description": "The unique error type name.",
             "readOnly": false
           },
           "description": {
             "type": "string",
-            "description": "A human-readable description of the event.",
+            "description": "A human-readable description of the error type.",
             "readOnly": true
-          },
-          "status": {
-            "type": "string",
-            "description": "The status of a webhook event.",
-            "readOnly": true
-          },
-          "resource_versions": {
-            "type": "array",
-            "description": "Identifier for the event type example: 1.0/2.0 etc.",
-            "readOnly": true,
-            "items": {
-              "type": "string",
-              "description": "The ID for an event type. For example, `1.0` or `2.0`."
-            }
           }
         },
-        "required": [
-          "name"
-        ]
-      },
-      "webhook": {
-        "type": "object",
-        "title": "Webhook",
-        "description": "One or more webhook objects.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The ID of the webhook.",
-            "readOnly": true
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "description": "The URL that is configured to listen on `localhost` for incoming `POST` notification messages that contain event information.",
-            "readOnly": false,
-            "maxLength": 2048
-          },
-          "event_types": {
-            "type": "array",
-            "maxItems": 500,
-            "description": "An array of events to which to subscribe your webhook. To subscribe to all events, including events as they are added, specify the asterisk wild card. To replace the `event_types` array, specify the asterisk wild card. To list all supported events, <a href=\"#event-type_list\">list available events</a>.",
-            "readOnly": false,
-            "items": {
-              "$ref": "#/components/schemas/event_type"
-            }
-          },
-          "links": {
-            "type": "array",
-            "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).",
-            "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/link_description",
-              "readOnly": true
-            }
-          }
-        },
-        "required": [
-          "url",
-          "event_types"
-        ]
-      },
-      "patch": {
-        "type": "object",
-        "title": "Patch",
-        "description": "The JSON patch object to apply partial updates to resources.",
-        "properties": {
-          "op": {
-            "type": "string",
-            "description": "The operation.",
-            "enum": [
-              "add",
-              "remove",
-              "replace",
-              "move",
-              "copy",
-              "test"
-            ]
-          },
-          "path": {
-            "type": "string",
-            "description": "The <a href=\"https://tools.ietf.org/html/rfc6901\">JSON Pointer</a> to the target document location at which to complete the operation."
-          },
-          "value": {
-            "title": "Patch Value",
-            "description": "The value to apply. The <code>remove</code> operation does not require a value."
-          },
-          "from": {
-            "type": "string",
-            "description": "The <a href=\"https://tools.ietf.org/html/rfc6901\">JSON Pointer</a> to the target document location from which to move the value. Required for the <code>move</code> operation."
-          }
-        },
-        "required": [
-          "op"
-        ]
-      },
-      "patch_request": {
-        "type": "array",
-        "title": "Patch Request",
-        "description": "An array of JSON patch objects to apply partial updates to resources.",
-        "items": {
-          "$ref": "#/components/schemas/patch"
-        }
-      },
-      "webhooks_lookup": {
-        "type": "object",
-        "title": "Webhook Lookup",
-        "description": "The webhook lookup details.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The ID of the webhook lookup.",
-            "readOnly": true
-          },
-          "client_id": {
-            "type": "string",
-            "pattern": "^(?!\\d+$)\\w+\\S+",
-            "maxLength": 128,
-            "description": "The application client ID.",
-            "readOnly": true
-          },
-          "links": {
-            "type": "array",
-            "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links/).",
-            "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/link_description",
-              "readOnly": true
-            }
-          }
-        }
-      },
-      "event_version": {
-        "type": "string",
-        "title": "Event Version",
-        "description": "The event version in the webhook notification.",
-        "deprecated": true,
-        "pattern": "^([0-9]+.[0-9]+)$"
-      },
-      "resource_version": {
-        "title": "Resource Version",
-        "description": "The resource version in the webhook notification.",
-        "type": "string",
-        "pattern": "^([0-9]+.[0-9]+)$"
+        "required": ["name"]
       },
       "event": {
         "type": "object",
@@ -1667,22 +1386,237 @@
             "$ref": "#/components/schemas/resource_version"
           },
           "resource": {
-            "type": "object",
-            "title": "Resource",
-            "description": "The resource that triggered the webhook event notification.",
-            "readOnly": true,
-            "additionalProperties": true
+            "$ref": "#/components/schemas/resource"
           },
           "links": {
-            "type": "array",
-            "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).",
-            "readOnly": true,
-            "items": {
-              "$ref": "#/components/schemas/link_description",
-              "readOnly": true
-            }
+            "$ref": "#/components/schemas/link_description_list"
           }
         }
+      },
+      "event_list": {
+        "type": "array",
+        "description": "An array of webhooks events.",
+        "items": {
+          "$ref": "#/components/schemas/event"
+        }
+      },
+      "event_resend": {
+        "type": "object",
+        "title": "Event Resend",
+        "description": "Resends a webhook event notification, by ID.",
+        "properties": {
+          "webhook_ids": {
+            "$ref": "#/components/schemas/webhook_ids_list"
+          }
+        }
+      },
+      "event_type": {
+        "type": "object",
+        "title": "Event Type",
+        "description": "An event type.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The unique event name.<blockquote><strong>Note:</strong> To subscribe to all events, including events as they are added, specify an `*` as the value to represent a wildcard.</blockquote>",
+            "readOnly": false
+          },
+          "description": {
+            "type": "string",
+            "description": "A human-readable description of the event.",
+            "readOnly": true
+          },
+          "status": {
+            "type": "string",
+            "description": "The status of a webhook event.",
+            "readOnly": true
+          },
+          "resource_versions": {
+            "$ref": "#/components/schemas/resource_versions_list"
+          }
+        },
+        "required": ["name"]
+      },
+      "event_type_list": {
+        "type": "array",
+        "description": "An array of webhook events.",
+        "items": {
+          "$ref": "#/components/schemas/event_type"
+        }
+      },
+      "event_version": {
+        "type": "string",
+        "title": "Event Version",
+        "description": "The event version in the webhook notification.",
+        "deprecated": true,
+        "pattern": "^([0-9]+.[0-9]+)$"
+      },
+      "link_description": {
+        "type": "object",
+        "title": "Link Description",
+        "description": "The request-related [HATEOAS link](/docs/api/reference/api-responses/#hateoas-links) information.",
+        "required": ["href", "rel"],
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The complete target URL. To make the related call, combine the method with this [URI Template-formatted](https://tools.ietf.org/html/rfc6570) link. For pre-processing, include the `$`, `(`, and `)` characters. The `href` is the key HATEOAS component that links a completed call with a subsequent call."
+          },
+          "rel": {
+            "type": "string",
+            "description": "The [link relation type](https://tools.ietf.org/html/rfc5988#section-4), which serves as an ID for a link that unambiguously describes the semantics of the link. See [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml)."
+          },
+          "method": {
+            "type": "string",
+            "description": "The HTTP method required to make the related call.",
+            "enum": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE",
+              "HEAD",
+              "CONNECT",
+              "OPTIONS",
+              "PATCH"
+            ]
+          }
+        }
+      },
+      "link_description_list": {
+        "type": "array",
+        "description": "An array of request-related [HATEOAS links](/docs/api/reference/api-responses/#hateoas-links).",
+        "readOnly": true,
+        "items": {
+          "$ref": "#/components/schemas/link_description"
+        }
+      },
+      "patch": {
+        "type": "object",
+        "title": "Patch",
+        "description": "The JSON patch object to apply partial updates to resources.",
+        "properties": {
+          "op": {
+            "type": "string",
+            "description": "The operation.",
+            "x-enumDescriptions": [
+              {
+                "value": "add",
+                "description": "Depending on the target location reference, completes one of these functions:<ul><li><strong>The target location is an array index</strong>. Inserts a new value into the array at the specified index.</li><li><strong>The target location is an object parameter that does not already exist</strong>. Adds a new parameter to the object.</li><li><strong>The target location is an object parameter that does exist</strong>. Replaces that parameter's value.</li></ul>The <code>value</code> parameter defines the value to add. For more information, see <a href=\"https://tools.ietf.org/html/rfc6902#section-4.1\">4.1. add</a>."
+              },
+              {
+                "value": "remove",
+                "description": "Removes the value at the target location. For the operation to succeed, the target location must exist. For more information, see <a href=\"https://tools.ietf.org/html/rfc6902#section-4.2\">4.2. remove</a>."
+              },
+              {
+                "value": "replace",
+                "description": "Replaces the value at the target location with a new value. The operation object must contain a <code>value</code> parameter that defines the replacement value. For the operation to succeed, the target location must exist. For more information, see <a href=\"https://tools.ietf.org/html/rfc6902#section-4.3\">4.3. replace</a>."
+              },
+              {
+                "value": "move",
+                "description": "Removes the value at a specified location and adds it to the target location. The operation object must contain a <code>from</code> parameter, which is a string that contains a JSON pointer value that references the location in the target document from which to move the value. For the operation to succeed, the <code>from</code> location must exist. For more information, see <a href=\"https://tools.ietf.org/html/rfc6902#section-4.4\">4.4. move</a>."
+              },
+              {
+                "value": "copy",
+                "description": "Copies the value at a specified location to the target location. The operation object must contain a <code>from</code> parameter, which is a string that contains a JSON pointer value that references the location in the target document from which to copy the value. For the operation to succeed, the <code>from</code> location must exist. For more information, see <a href=\"https://tools.ietf.org/html/rfc6902#section-4.5\">4.5. copy</a>."
+              },
+              {
+                "value": "test",
+                "description": "Tests that a value at the target location is equal to a specified value. The operation object must contain a <code>value</code> parameter that defines the value to compare to the target location's value. For the operation to succeed, the target location must be equal to the <code>value</code> value. For test, <code>equal</code> indicates that the value at the target location and the value that <code>value</code> defines are of the same JSON type. The data type of the value determines how equality is defined:<table><thead align=\"left\"><tr><th>Type</th><th>Considered equal if both values</th></tr></thead><tbody align=\"left\"><tr><td><strong>strings</strong></td><td>Contain the same number of Unicode characters and their code points are byte-by-byte equal.</td></tr><tr><td><strong>numbers</strong></td><td>Are numerically equal.</td></tr><tr><td><strong>arrays</strong></td><td>Contain the same number of values, and each value is equal to the value at the corresponding position in the other array, by using these type-specific rules.</td></tr><tr><td><strong>objects</strong></td><td>Contain the same number of parameters, and each parameter is equal to a parameter in the other object, by comparing their keys (as strings) and their values (by using these type-specific rules).</td></tr><tr><td><strong>literals (<code>false</code>, <code>true</code>, and <code>null</code>)</strong></td><td>Are the same. The comparison is a logical comparison. For example, whitespace between the parameter values of an array is not significant. Also, ordering of the serialization of object parameters is not significant.</td></tr></tbody></table>For more information, see <a href=\"https://tools.ietf.org/html/rfc6902#section-4.6\">4.6. test</a>."
+              }
+            ],
+            "enum": ["add", "remove", "replace", "move", "copy", "test"]
+          },
+          "path": {
+            "type": "string",
+            "description": "The <a href=\"https://tools.ietf.org/html/rfc6901\">JSON Pointer</a> to the target document location at which to complete the operation."
+          },
+          "value": {
+            "type": [
+              "number",
+              "integer",
+              "string",
+              "boolean",
+              "null",
+              "array",
+              "object"
+            ],
+            "title": "Patch Value",
+            "description": "The value to apply. The <code>remove</code> operation does not require a value."
+          },
+          "from": {
+            "type": "string",
+            "description": "The <a href=\"https://tools.ietf.org/html/rfc6901\">JSON Pointer</a> to the target document location from which to move the value. Required for the <code>move</code> operation."
+          }
+        },
+        "required": ["op"]
+      },
+      "patch_request": {
+        "type": "array",
+        "title": "Patch Request",
+        "description": "An array of JSON patch objects to apply partial updates to resources.",
+        "items": {
+          "$ref": "#/components/schemas/patch"
+        }
+      },
+      "resource": {
+        "type": "object",
+        "title": "Resource",
+        "description": "The resource that triggered the webhook event notification.",
+        "readOnly": true,
+        "additionalProperties": true
+      },
+      "resource_version": {
+        "title": "Resource Version",
+        "description": "The resource version in the webhook notification.",
+        "type": "string",
+        "pattern": "^([0-9]+.[0-9]+)$"
+      },
+      "resource_versions": {
+        "type": "string",
+        "description": "The ID for an event type. For example, `1.0` or `2.0`."
+      },
+      "resource_versions_list": {
+        "type": "array",
+        "description": "Identifier for the event type example: 1.0/2.0 etc.",
+        "readOnly": true,
+        "items": {
+          "$ref": "#/components/schemas/resource_versions"
+        }
+      },
+      "simulate_event": {
+        "type": "object",
+        "title": "Simulate Event",
+        "description": "Simulates a mock webhook event.",
+        "properties": {
+          "webhook_id": {
+            "type": "string",
+            "description": "The ID of the webhook. If omitted, the URL is required.",
+            "readOnly": false,
+            "pattern": "^[a-zA-Z0-9]+$",
+            "maxLength": 50
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL for the webhook endpoint. If omitted, the webhook ID is required.",
+            "readOnly": false,
+            "maxLength": 2048
+          },
+          "event_type": {
+            "type": "string",
+            "description": "The event name. Specify one of the subscribed events. For each request, provide only one event.",
+            "readOnly": false,
+            "maxLength": 50,
+            "pattern": "^[a-zA-Z0-9.]+$"
+          },
+          "resource_version": {
+            "type": "string",
+            "description": "The identifier for event type ex: 1.0/2.0 etc.",
+            "readOnly": false
+          }
+        },
+        "required": ["event_type"]
+      },
+      "swagger_link_description": {
+        "$ref": "#/components/schemas/link_description"
       },
       "verify_webhook_signature": {
         "type": "object",
@@ -1747,67 +1681,84 @@
           "verification_status": {
             "type": "string",
             "description": "The status of the signature verification.",
-            "enum": [
-              "SUCCESS",
-              "FAILURE"
-            ]
+            "enum": ["SUCCESS", "FAILURE"]
           }
         },
-        "required": [
-          "verification_status"
-        ]
+        "required": ["verification_status"]
       },
-      "event_resend": {
+      "webhook": {
         "type": "object",
-        "title": "Event Resend",
-        "description": "Resends a webhook event notification, by ID.",
+        "title": "Webhook",
+        "description": "One or more webhook objects.",
         "properties": {
-          "webhook_ids": {
-            "type": "array",
-            "maxItems": 500,
-            "description": "An array of webhook account IDs.",
-            "items": {
-              "type": "string",
-              "description": "The ID of the webhook event notification to resend."
-            }
-          }
-        }
-      },
-      "simulate_event": {
-        "type": "object",
-        "title": "Simulate Event",
-        "description": "Simulates a mock webhook event.",
-        "properties": {
-          "webhook_id": {
+          "id": {
             "type": "string",
-            "description": "The ID of the webhook. If omitted, the URL is required.",
-            "readOnly": false,
-            "pattern": "^[a-zA-Z0-9]+$",
-            "maxLength": 50
+            "description": "The ID of the webhook.",
+            "readOnly": true
           },
           "url": {
             "type": "string",
             "format": "uri",
-            "description": "The URL for the webhook endpoint. If omitted, the webhook ID is required.",
+            "description": "The URL that is configured to listen on `localhost` for incoming `POST` notification messages that contain event information.",
             "readOnly": false,
             "maxLength": 2048
           },
-          "event_type": {
-            "type": "string",
-            "description": "The event name. Specify one of the subscribed events. For each request, provide only one event.",
-            "readOnly": false,
-            "maxLength": 50,
-            "pattern": "^[a-zA-Z0-9.]+$"
+          "event_types": {
+            "$ref": "#/components/schemas/definitions-event_type_list"
           },
-          "resource_version": {
-            "type": "string",
-            "description": "The identifier for event type ex: 1.0/2.0 etc.",
-            "readOnly": false
+          "links": {
+            "$ref": "#/components/schemas/definitions-link_description_list"
           }
         },
-        "required": [
-          "event_type"
-        ]
+        "required": ["url", "event_types"]
+      },
+      "webhook_ids": {
+        "type": "string",
+        "description": "The ID of the webhook event notification to resend."
+      },
+      "webhook_ids_list": {
+        "type": "array",
+        "maxItems": 500,
+        "description": "An array of webhook account IDs.",
+        "items": {
+          "$ref": "#/components/schemas/webhook_ids"
+        }
+      },
+      "webhook_list": {
+        "type": "array",
+        "description": "An array of webhooks.",
+        "items": {
+          "$ref": "#/components/schemas/webhook"
+        }
+      },
+      "webhooks_lookup": {
+        "type": "object",
+        "title": "Webhook Lookup",
+        "description": "The webhook lookup details.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the webhook lookup.",
+            "readOnly": true
+          },
+          "client_id": {
+            "type": "string",
+            "pattern": "^(?!\\d+$)\\w+\\S+",
+            "maxLength": 128,
+            "description": "The application client ID.",
+            "readOnly": true
+          },
+          "links": {
+            "$ref": "#/components/schemas/definitions-link_description_list"
+          }
+        }
+      },
+      "webhooks_lookup_list": {
+        "type": "array",
+        "description": "An array of webhook lookups.",
+        "items": {
+          "$ref": "#/components/schemas/webhooks_lookup"
+        }
       }
     },
     "parameters": {
@@ -1817,10 +1768,7 @@
         "description": "Filters the webhooks in the response by an `anchor_id` entity type.",
         "schema": {
           "type": "string",
-          "enum": [
-            "APPLICATION",
-            "ACCOUNT"
-          ],
+          "enum": ["APPLICATION", "ACCOUNT"],
           "default": "APPLICATION"
         }
       },
